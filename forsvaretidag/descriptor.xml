@@ -1,0 +1,16 @@
+<app>
+	<id>forsvaretidag</id>
+	<name>Forsvaret i dag</name>
+	<version>1.0</version>
+	<description>Shows the latest photos from Norwegian Armed Forces</description>
+	<thumb></thumb>
+	<repository>http://dir.boxee.tv/apps</repository>
+	<media>pictures</media>
+	<copyright>MIT License (c) Norwegian Armed Forces</copyright>
+	<author>Sindre Sorhus</author>
+	<email>sindresorhus@gmail.com</email>
+	<type>skin</type>
+	<startWindow>main</startWindow>
+	<platform>all</platform>
+	<minversion>0.9.21</minversion>
+</app>

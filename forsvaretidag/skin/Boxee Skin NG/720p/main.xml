@@ -1,0 +1,82 @@
+<?xml version="1.0"?>
+<window type="window" id="14000">
+	<defaultcontrol>140</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<controls>
+		<control type="group">
+			<control type="list" id="140">
+				<width>1280</width>
+				<height>720</height>
+				<visible>true</visible>
+				<viewtype>list</viewtype>
+				<orientation>horizontal</orientation>
+				<scrolltime>0</scrolltime>
+				<itemlayout width="1280" height="720"></itemlayout>
+				<preloaditems>30</preloaditems>
+				<focusedlayout width="1280" height="720">
+					<control type="largeimage">
+						<animation type="Focus">
+							<effect type="fade" start="0" end="100" time="500" delay="0" />
+						</animation>
+						<width>1280</width>
+						<height>720</height>
+						<texture>$INFO[ListItem.property(Image0)]</texture>
+						<aspectratio>keep</aspectratio>
+					</control>
+					<control type="group">
+						<animation type="Focus">
+							<effect type="fade" start="0" end="100" time="200" delay="500" />
+						</animation>
+						<control type="image">
+							<posx>0</posx>
+							<posy>600</posy>
+							<width>1280</width>
+							<height>120</height>
+							<texture>caption-bg.png</texture>
+							<aspectratio>keep</aspectratio>
+						</control>
+						<control type="label">
+							<description>Title</description>
+							<posx>30</posx>
+							<posy>600</posy>
+							<width>1220</width>
+							<height>60</height>
+							<font>font23b</font>
+							<textcolor>white</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+						<control type="label">
+							<description>Description</description>
+							<posx>30</posx>
+							<posy>630</posy>
+							<width>1220</width>
+							<height>60</height>
+							<font>font21</font>
+							<textcolor>white</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.property(Description)]</label>
+						</control>
+						<control type="label">
+							<description>Image counter and days ago</description>
+							<posx>30</posx>
+							<posy>685</posy>
+							<width>1220</width>
+							<height>20</height>
+							<font>font17</font>
+							<textcolor>white</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.property(custom:counter)]</label>
+						</control>
+					</control>
+				</focusedlayout>
+			</control>
+		</control>
+	</controls>
+</window>
