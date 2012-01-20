@@ -3,7 +3,7 @@
 	<name>Forsvaret i dag</name>
 	<version>1.0</version>
 	<description>Shows the latest photos from Norwegian Armed Forces</description>
-	<thumb></thumb>
+	<thumb>https://github.com/sindresorhus/Forsvaretidag-Boxee/raw/master/thumb.png</thumb>
 	<repository>http://dir.boxee.tv/apps</repository>
 	<media>pictures</media>
 	<copyright>MIT License (c) Norwegian Armed Forces</copyright>

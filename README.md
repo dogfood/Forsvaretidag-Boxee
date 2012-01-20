@@ -1,7 +1,7 @@
 # Forsvaret i dag
 Boxee app - Shows the latest photos from Norwegian Armed Forces.
 
-![Screenshot](screenshot.png)
+![Screenshot](https://github.com/sindresorhus/Forsvaretidag-Boxee/raw/master/screenshot.png)
 
 ## Credit
 Created by [Sindre Sorhus](http://sindresorhus.com)  
