@@ -16,7 +16,7 @@
 				<focusedlayout width="1280" height="720">
 					<control type="largeimage">
 						<animation type="Focus">
-							<effect type="fade" start="0" end="100" time="500" delay="0" />
+							<effect type="fade" start="0" end="100" time="400" delay="0" />
 						</animation>
 						<width>1280</width>
 						<height>720</height>
@@ -24,55 +24,54 @@
 						<aspectratio>keep</aspectratio>
 					</control>
 					<control type="group">
-						<animation type="Focus">
-							<effect type="fade" start="0" end="100" time="200" delay="500" />
-						</animation>
 						<control type="image">
 							<posx>0</posx>
-							<posy>600</posy>
+							<posy>610</posy>
 							<width>1280</width>
-							<height>120</height>
+							<height>110</height>
 							<texture>caption-bg.png</texture>
 							<aspectratio>keep</aspectratio>
 						</control>
 						<control type="label">
 							<description>Title</description>
 							<posx>30</posx>
-							<posy>600</posy>
+							<posy>620</posy>
 							<width>1220</width>
-							<height>60</height>
-							<font>font23b</font>
+							<height>30</height>
+							<font>font24b</font>
 							<textcolor>white</textcolor>
 							<shadowcolor>black</shadowcolor>
 							<align>left</align>
-							<aligny>center</aligny>
+							<aligny>top</aligny>
 							<label>$INFO[ListItem.Label]</label>
+						</control>
+						<control type="label">
+							<description>Image counter and days ago</description>
+							<posx>1250</posx>
+							<posy>620</posy>
+							<width>600</width>
+							<height>30</height>
+							<font>font17</font>
+							<textcolor>white</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<align>right</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.property(custom:counter)]</label>
 						</control>
 						<control type="label">
 							<description>Description</description>
 							<posx>30</posx>
-							<posy>630</posy>
+							<posy>655</posy>
 							<width>1220</width>
 							<height>60</height>
-							<font>font21</font>
+							<font>font20</font>
 							<textcolor>white</textcolor>
 							<shadowcolor>black</shadowcolor>
 							<align>left</align>
-							<aligny>center</aligny>
+							<aligny>top</aligny>
+							<wrapmultiline>true</wrapmultiline>
+							<scroll>true</scroll>
 							<label>$INFO[ListItem.property(Description)]</label>
-						</control>
-						<control type="label">
-							<description>Image counter and days ago</description>
-							<posx>30</posx>
-							<posy>685</posy>
-							<width>1220</width>
-							<height>20</height>
-							<font>font17</font>
-							<textcolor>white</textcolor>
-							<shadowcolor>black</shadowcolor>
-							<align>left</align>
-							<aligny>center</aligny>
-							<label>$INFO[ListItem.property(custom:counter)]</label>
 						</control>
 					</control>
 				</focusedlayout>

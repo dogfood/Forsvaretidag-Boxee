@@ -24,11 +24,13 @@ def main():
 			# Skip posts without img
 			continue
 		# Since it's wrapped in CDATA we must get the contents
-		title = elem.find('title').contents[0].encode('utf-8')
+		# Strip the trailing dot and whitespace
+		title = elem.find('title').contents[0].encode('utf-8').rstrip('. ')
+		print title
 		summary = elem.find('description').contents[0].replace('\n', ' ').encode('utf-8')
 		pub_date = elem.find('pubdate').string
 		updated = rfc822_to_datetime(pub_date)
-		counter = '%s/%s   %s' % (i + 1, len(elems), days_ago(updated))
+		counter = '%s   %s/%s' % (days_ago(updated), i + 1, len(elems))
 		item = mc.ListItem(mc.ListItem.MEDIA_PICTURE)
 		item.SetImage(0, img)
 		item.SetContentType('image/jpeg')
