@@ -24,6 +24,7 @@
 						<aspectratio>keep</aspectratio>
 					</control>
 					<control type="group">
+						<visible>Control.IsVisible(150)</visible>
 						<control type="image">
 							<posx>0</posx>
 							<posy>610</posy>
@@ -75,6 +76,17 @@
 						</control>
 					</control>
 				</focusedlayout>
+				<content type="action">
+					<onclick lang="python"><![CDATA[
+# Toggle the caption using a dummy element to get it to work
+control = mc.GetWindow(14000).GetControl(150)
+control.SetVisible( not control.IsVisible() )
+]]>					</onclick>
+				</content>
+			</control>
+			<control type="label" id="150">
+				<description>Dummy element</description>
+				<label>-</label>
 			</control>
 		</control>
 	</controls>
