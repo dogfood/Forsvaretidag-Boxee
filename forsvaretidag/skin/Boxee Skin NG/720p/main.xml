@@ -7,13 +7,23 @@
 			<control type="list" id="140">
 				<width>1280</width>
 				<height>720</height>
-				<visible>true</visible>
 				<viewtype>list</viewtype>
 				<orientation>horizontal</orientation>
 				<scrolltime>0</scrolltime>
 				<itemlayout width="1280" height="720"></itemlayout>
-				<preloaditems>30</preloaditems>
+				<preloaditems>5</preloaditems>
 				<focusedlayout width="1280" height="720">
+					<description>Use 2 largeimage containers and switch between them, since 'aspectratio' can't be dynamic</description>
+					<control type="largeimage">
+						<animation type="Focus">
+							<effect type="fade" start="0" end="100" time="400" delay="0" />
+						</animation>
+						<width>1280</width>
+						<height>720</height>
+						<texture>$INFO[ListItem.property(Image0)]</texture>
+						<aspectratio>scale</aspectratio>
+						<visible>StringCompare(ListItem.property(custom:ratio),scale)</visible>
+					</control>
 					<control type="largeimage">
 						<animation type="Focus">
 							<effect type="fade" start="0" end="100" time="400" delay="0" />
@@ -22,6 +32,7 @@
 						<height>720</height>
 						<texture>$INFO[ListItem.property(Image0)]</texture>
 						<aspectratio>keep</aspectratio>
+						<visible>StringCompare(ListItem.property(custom:ratio),keep)</visible>
 					</control>
 					<control type="group">
 						<visible>Control.IsVisible(150)</visible>

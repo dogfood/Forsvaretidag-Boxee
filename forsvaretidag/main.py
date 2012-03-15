@@ -1,8 +1,7 @@
 # -*- coding: utf-8 -*-
 import mc
 import rfc822
-from time import mktime
-from datetime import datetime, timedelta
+from datetime import datetime
 from BeautifulSoup import BeautifulStoneSoup
 
 
@@ -20,13 +19,13 @@ def main():
 		try:
 			# Need to convert it to 'str' since SetImage doesn't support 'unicode'
 			img = elem.find('enclosure')['url'].encode('utf-8')
+			media = elem.find('media:content')
 		except:
 			# Skip posts without img
 			continue
 		# Since it's wrapped in CDATA we must get the contents
 		# Strip the trailing dot and whitespace
 		title = elem.find('title').contents[0].encode('utf-8').rstrip('. ')
-		print title
 		summary = elem.find('description').contents[0].replace('\n', ' ').encode('utf-8')
 		pub_date = elem.find('pubdate').string
 		updated = rfc822_to_datetime(pub_date)
@@ -37,9 +36,18 @@ def main():
 		item.SetLabel(title)
 		item.SetDescription(summary, False)
 		item.SetProperty('counter', counter)
+		# Ugly workaround to scale only landscape images
+		if media and is_landscape(media['width'], media['height']):
+			item.SetProperty('ratio', 'scale')
+		else:
+			item.SetProperty('ratio', 'keep')
 		item_list.append(item)
 	mc.GetWindow(14000).GetList(140).SetItems(item_list)
 	mc.HideDialogWait()
+
+
+def is_landscape(width, height):
+	return int(width) / int(height) > 0
 
 
 def rfc822_to_datetime(date_string):
