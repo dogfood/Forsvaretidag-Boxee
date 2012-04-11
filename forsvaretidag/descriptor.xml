@@ -1,7 +1,7 @@
 <app>
 	<id>forsvaretidag</id>
 	<name>Forsvaret i dag</name>
-	<version>1.0</version>
+	<version>1.02</version>
 	<description>Shows the latest photos from Norwegian Armed Forces</description>
 	<thumb>https://github.com/sindresorhus/Forsvaretidag-Boxee/raw/master/thumb.png</thumb>
 	<repository>http://dir.boxee.tv/apps</repository>
